@@ -7,6 +7,8 @@ class Content extends React.Component {
 		this.state = {
 			counts: 0,
 		};
+
+		this.getRandNumb = this.getRandNumb.bind(this);
 	};
 
 	incrCounts() {
@@ -17,12 +19,19 @@ class Content extends React.Component {
 		});
 	};
 
+	getRandNumb() {
+		let value = Math.round(Math.random() * 100);
+		this.props.onUpdate(value);
+	};
+
 	render() {
 		return (
 			<div>
 				<p>{this.props.name}</p>
 				<p>Counts: {this.state.counts}</p>
 				<button onClick={this.incrCounts.bind(this)}>Update</button>
+				<p>Random number: {this.props.value}</p>
+				<button onClick={this.getRandNumb}>Get Random Number</button>
 			</div>
 		);
 	};
