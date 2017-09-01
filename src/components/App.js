@@ -14,7 +14,7 @@ class App extends React.Component {
 			<div>
 				<button onClick={this.alertMethod}>alert</button>
 				<Header name="header starts from here"/>
-				<Content name="content starts from here"/>
+				<Content />
 			</div>
 		);
 	};

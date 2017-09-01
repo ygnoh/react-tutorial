@@ -11,4 +11,12 @@ class Content extends React.Component {
 	};
 }
 
+Content.defaultProps = {
+	name: "not set yet",
+};
+
+Content.propTypes = {
+	name: React.PropTypes.string,
+};
+
 export default Content;
