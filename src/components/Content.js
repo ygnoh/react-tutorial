@@ -1,11 +1,28 @@
 import React from "react";
 
 class Content extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			counts: 0,
+		};
+	};
+
+	incrCounts() {
+		this.setState((prevState) => {
+			return {
+				counts: prevState.counts + 1,
+			};
+		});
+	};
+
 	render() {
 		return (
 			<div>
 				<p>{this.props.name}</p>
-				<h4>Content loaded successfully</h4>
+				<p>Counts: {this.state.counts}</p>
+				<button onClick={this.incrCounts.bind(this)}>Update</button>
 			</div>
 		);
 	};
