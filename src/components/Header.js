@@ -3,7 +3,10 @@ import React from "react";
 class Header extends React.Component {
 	render() {
 		return(
-			<h4>Header loaded successfully</h4>
+			<div>
+				<p>{this.props.name}</p>
+				<h4>Header loaded successfully</h4>
+			</div>
 		);
 	};
 }

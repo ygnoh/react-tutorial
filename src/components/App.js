@@ -13,8 +13,8 @@ class App extends React.Component {
 		return (
 			<div>
 				<button onClick={this.alertMethod}>alert</button>
-				<Header />
-				<Content />
+				<Header name="header starts from here"/>
+				<Content name="content starts from here"/>
 			</div>
 		);
 	};
